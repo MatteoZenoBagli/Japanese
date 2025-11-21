@@ -1,14 +1,40 @@
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Japanese</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/hiragana.js" defer></script>
   </head>
   <body>
     <h1>Hiragana (<span lang="ja">ひらがな</span>)</h1>
 
+    <romaji-to-hiragana>
+      <div class="input-group">
+        <label for="input">Insert text (romaji):</label>
+        <textarea
+          id="input"
+          placeholder="Example: konnichiwa, arigatou, watashi..."
+        ></textarea>
+        <p class="romaji-hint">
+          💡 Using standard romanization (ie: "chi", "tsu", "sha")
+        </p>
+      </div>
+
+      <div class="input-group">
+        <label for="output">Result in Hiragana:</label>
+        <textarea id="output" readonly></textarea>
+      </div>
+
+      <div class="info">
+        <strong>How it works:</strong> This converter converts romaji (Japanese
+        romanization) to hiragana. It works with standard combinations such as
+        "ka", "ki", "ku", "ke", "ko", "sha", "chi", "tsu", etc.
+      </div>
+    </romaji-to-hiragana>
+
     <div class="grid__container">
       <h2>Sillabe base (Gojūon - <span lang="ja">五十音</span>)</h2>
+      <!-- prettier-ignore -->
       <ul class="grid" style="--rows: 11">
         <li data-romaji="a"><div><p lang="ja">あ</p><p lang="en">a</p></div></li>
         <li data-romaji="ka"><div><p lang="ja">か</p><p lang="en">ka</p></div></li>
@@ -74,6 +100,7 @@
 
     <div class="grid__container">
       <h2>Dakuten (ten ten) <span lang="ja">◌゙</span></h2>
+      <!-- prettier-ignore -->
       <ul class="grid" style="--rows: 4">
         <li data-romaji="ga"><div><p lang="ja">が</p><p lang="en">ga</p></div></li>
         <li data-romaji="za"><div><p lang="ja">ざ</p><p lang="en">za</p></div></li>
@@ -104,6 +131,7 @@
 
     <div class="grid__container">
       <h2>Handakuten (maru) <span lang="ja">◌゚</span></h2>
+      <!-- prettier-ignore -->
       <ul class="grid">
         <li data-romaji="pa"><div><p lang="ja">ぱ</p><p lang="en">pa</p></div></li>
         <li data-romaji="pi"><div><p lang="ja">ぴ</p><p lang="en">pi</p></div></li>
@@ -131,7 +159,7 @@
       <tbody>
         <tr>
           <th>∅</th>
-          <td lang="ja" data-romaji="a" data-ipa="[a]" >あ</td>
+          <td lang="ja" data-romaji="a" data-ipa="[a]">あ</td>
           <td lang="ja" data-romaji="i" data-ipa="[i]">い</td>
           <td lang="ja" data-romaji="u" data-ipa="[ɯ]">う</td>
           <td lang="ja" data-romaji="e" data-ipa="[e]">え</td>

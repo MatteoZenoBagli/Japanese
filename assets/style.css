@@ -4,11 +4,18 @@
   --font-size: 16px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: var(--font-size);
 }
 
 body {
+  min-height: 100vh;
   max-width: 1200px;
   background-color: var(--background-color);
   padding: 20px;
@@ -86,4 +93,63 @@ td {
 .grid__container {
   width: 100%;
   text-align: center;
+}
+
+romaji-to-hiragana {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--border-color);
+}
+
+#output {
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.info {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #1565c0;
+}
+
+.romaji-hint {
+  font-size: 0.85em;
+  color: #111;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: var(--border-color);
 }
