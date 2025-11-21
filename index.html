@@ -3,12 +3,23 @@
     <meta charset="utf-8" />
     <title>Japanese</title>
     <link rel="stylesheet" href="assets/style.css" />
-    <script src="assets/hiragana.js" defer></script>
+    <script src="assets/romaji-converter.js" defer></script>
   </head>
   <body>
-    <h1>Hiragana (<span lang="ja">ひらがな</span>)</h1>
+    <h1><span lang="en">Hiragana</span> (<span lang="ja">ひらがな</span>)</h1>
 
-    <romaji-to-hiragana>
+    <romaji-converter class="container">
+      <div>
+        <label>
+          <input type="radio" name="script" value="hiragana" checked />
+          <span lang="en">Hiragana</span> <span lang="ja">(あいうえお)</span>
+        </label>
+        <label>
+          <input type="radio" name="script" value="katakana" />
+          <span lang="en">Katakana</span> <span lang="ja">(アイウエオ)</span>
+        </label>
+      </div>
+
       <div class="input-group">
         <label for="input">Insert text (romaji):</label>
         <textarea
@@ -21,16 +32,16 @@
       </div>
 
       <div class="input-group">
-        <label for="output">Result in Hiragana:</label>
+        <label for="output">Result in <span name="script">Hiragana</span></label>
         <textarea id="output" readonly></textarea>
       </div>
 
       <div class="info">
         <strong>How it works:</strong> This converter converts romaji (Japanese
-        romanization) to hiragana. It works with standard combinations such as
+        romanization) to <span name="script">Hiragana</span>. It works with standard combinations such as
         "ka", "ki", "ku", "ke", "ko", "sha", "chi", "tsu", etc.
       </div>
-    </romaji-to-hiragana>
+    </romaji-converter>
 
     <div class="grid__container">
       <h2>Sillabe base (Gojūon - <span lang="ja">五十音</span>)</h2>
